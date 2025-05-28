@@ -39,7 +39,7 @@ def main():
 
     n_gpus = torch.cuda.device_count()
     os.environ['MASTER_ADDR'] = 'localhost'
-    os.environ['MASTER_PORT'] = hps.train.port
+    os.environ['MASTER_PORT'] = "29600"
 
     mp.spawn(run, nprocs=n_gpus, args=(n_gpus, hps,))
 
